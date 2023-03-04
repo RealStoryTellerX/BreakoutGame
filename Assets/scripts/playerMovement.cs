@@ -2,8 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class playerMovement : MonoBehaviour
 {
+    public float minMoveDist = 2.0f;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,8 +26,20 @@ public class playerMovement : MonoBehaviour
      * 
      */
 
-    void FixedUpdate()
+    void Update()
     {
-        
+        if(Input.GetKeyDown(KeyCode.A))
+        {
+            //Debug.Log("Left Pressed");
+            transform.SetPositionAndRotation(transform.position - new Vector3(minMoveDist, 0,0), transform.rotation);
+        }
+
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            //Debug.Log("Left Pressed");
+            transform.SetPositionAndRotation(transform.position + new Vector3(minMoveDist, 0, 0), transform.rotation);
+        }
+
+
     }
 }
