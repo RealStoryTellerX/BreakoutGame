@@ -56,7 +56,9 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\ballMovement.cs" />
     <Compile Include="Assets\scripts\playerMovement.cs" />
+    <Compile Include="Assets\cameraStuff.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
