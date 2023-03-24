@@ -59,6 +59,7 @@
     <Compile Include="Assets\ballMovement.cs" />
     <Compile Include="Assets\scripts\playerMovement.cs" />
     <Compile Include="Assets\cameraStuff.cs" />
+    <Compile Include="Assets\screenCollider.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

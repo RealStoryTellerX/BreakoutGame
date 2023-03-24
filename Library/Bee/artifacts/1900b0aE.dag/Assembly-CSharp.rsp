@@ -351,6 +351,7 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 "Assets/ballMovement.cs"
 "Assets/cameraStuff.cs"
+"Assets/screenCollider.cs"
 "Assets/scripts/playerMovement.cs"
 -langversion:9.0
 
