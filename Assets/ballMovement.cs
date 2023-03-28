@@ -78,19 +78,25 @@ public class ballMovement : MonoBehaviour
 
     private void Direct(Vector3 reflectVector)
     {
+        //ball hit the side of the player
         if (reflectVector.y == 0 || reflectVector.y <0)
         {
-            //ball hit the side of the player
             ReflectProjectile(reflectVector);
             return;
         }
 
         Vector3 mouseDirection = playa.GetComponent<director>().mouseDirectionVector;
-        Vector3 _velocity = Vector3.Reflect(rb.velocity, mouseDirection.normalized + reflectVector.normalized);
-        float prevVelocity = _velocity.magnitude;
+        float prevVelocity = rb.velocity.magnitude;
         //float rando = Random.Range(10.0f, 12.0f);
-        //_velocity.Normalize();
-        rb.velocity = mouseDirection.normalized * prevVelocity ;
+        if (mouseDirection == Vector3.zero)
+        {
+            Vector3 _velocity = Vector3.Reflect(rb.velocity, mouseDirection.normalized + reflectVector.normalized);
+            rb.velocity = _velocity.normalized * prevVelocity;
+        }
+        else
+        {
+            rb.velocity = mouseDirection.normalized * prevVelocity ;
+        }
     }
 
     private void ReflectProjectile(Vector3 reflectVector)
