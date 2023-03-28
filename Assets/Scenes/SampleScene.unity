@@ -142,6 +142,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   initialForceMultiplier: 1000
   cam: {fileID: 963194225}
+  playa: {fileID: 926750720}
   EdgeBuffer: 0.01
   bounceFX: {fileID: 2112046020}
 --- !u!4 &120876315 stripped
@@ -163,7 +164,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 20
+  m_Constraints: 80
   m_CollisionDetection: 1
 --- !u!1 &705507993
 GameObject:
@@ -280,6 +281,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 116
   m_CollisionDetection: 0
+--- !u!114 &926750732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 926750720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa264ebe78945134c81904b312040fca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mouseDirectionVector: {x: 0, y: 0, z: 0}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -329,7 +343,7 @@ Camera:
     x: 0
     y: 0
     width: 1
-    height: 1
+    height: 1.5
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
@@ -434,9 +448,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 744188066012444595, guid: 977be5a46b6c0db4ea35a14a474325a5, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 3088982905008144966, guid: 977be5a46b6c0db4ea35a14a474325a5, type: 3}
       propertyPath: m_RootOrder
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3088982905008144966, guid: 977be5a46b6c0db4ea35a14a474325a5, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2.4748
       objectReference: {fileID: 0}
     - target: {fileID: 3088982905008144966, guid: 977be5a46b6c0db4ea35a14a474325a5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -444,7 +466,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3088982905008144966, guid: 977be5a46b6c0db4ea35a14a474325a5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.04
+      value: -8.44
       objectReference: {fileID: 0}
     - target: {fileID: 3088982905008144966, guid: 977be5a46b6c0db4ea35a14a474325a5, type: 3}
       propertyPath: m_LocalPosition.z
@@ -505,7 +527,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!198 &2112046020
 ParticleSystem:
   m_ObjectHideFlags: 0

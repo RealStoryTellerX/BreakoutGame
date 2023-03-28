@@ -60,6 +60,7 @@
     <Compile Include="Assets\scripts\playerMovement.cs" />
     <Compile Include="Assets\cameraStuff.cs" />
     <Compile Include="Assets\screenCollider.cs" />
+    <Compile Include="Assets\director.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

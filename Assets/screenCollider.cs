@@ -6,7 +6,7 @@ using UnityEngine;
 public class screenCollider : MonoBehaviour
 {
     // Start is called before the first frame update
-    public float thickness = 1.0f;
+    public float thickness = 0.05f;
 
     void Start()
     {
@@ -16,15 +16,16 @@ public class screenCollider : MonoBehaviour
         float screenWidth = screenHeight * screenAspect;
 
         // Create colliders for the edges of the screen
-        CreateEdgeCollider(new Vector2(-screenWidth / 2f - thickness / 2f, 0), new Vector2(thickness, screenHeight)); // Left
-        CreateEdgeCollider(new Vector2(screenWidth / 2f + thickness / 2f, 0), new Vector2(thickness, screenHeight)); // Right
-        CreateEdgeCollider(new Vector2(0, -screenHeight / 2f - thickness / 2f), new Vector2(screenWidth, thickness)); // Bottom
-        CreateEdgeCollider(new Vector2(0, screenHeight / 2f + thickness / 2f), new Vector2(screenWidth, thickness)); // Top
+        CreateEdgeCollider(new Vector2(-screenWidth / 2f - thickness / 2f, 0), new Vector2(thickness, screenHeight + 2f),"left"); // Left
+        CreateEdgeCollider(new Vector2(screenWidth / 2f + thickness / 2f, 0), new Vector2(thickness, screenHeight + 2f),"right"); // Right
+        CreateEdgeCollider(new Vector2(0, -screenHeight / 2f - thickness / 2f), new Vector2(screenWidth, thickness - 2f),"bottom"); // Bottom
+        CreateEdgeCollider(new Vector2(0, screenHeight / 2f + thickness / 2f), new Vector2(screenWidth, thickness + 2f),"top"); // Top
     }
 
-    void CreateEdgeCollider(Vector2 position, Vector2 size)
+    void CreateEdgeCollider(Vector2 position, Vector2 size, string tag = "")
     {
         GameObject edge = new GameObject("Edge");
+        edge.tag = tag;
         edge.transform.parent = transform;
         edge.transform.localPosition = position;
         BoxCollider collider = edge.AddComponent<BoxCollider>();
