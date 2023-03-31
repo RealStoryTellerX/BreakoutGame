@@ -422,6 +422,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thickness: 10
+  collidedrMat: {fileID: 13400000, guid: 4cd24e3b13cf1644582e96097d924850, type: 2}
 --- !u!4 &1383972621
 Transform:
   m_ObjectHideFlags: 0

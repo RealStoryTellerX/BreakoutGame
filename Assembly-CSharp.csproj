@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\director.cs" />
+    <Compile Include="Assets\Bouncer.cs" />
     <Compile Include="Assets\ballMovement.cs" />
     <Compile Include="Assets\scripts\playerMovement.cs" />
     <Compile Include="Assets\cameraStuff.cs" />

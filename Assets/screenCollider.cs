@@ -7,6 +7,7 @@ public class screenCollider : MonoBehaviour
 {
     // Start is called before the first frame update
     public float thickness = 0.05f;
+    public PhysicMaterial collidedrMat; 
 
     void Start()
     {
@@ -40,5 +41,7 @@ public class screenCollider : MonoBehaviour
                             RigidbodyConstraints.FreezeRotationX |
                             RigidbodyConstraints.FreezeRotationY |
                             RigidbodyConstraints.FreezeRotationZ;
+        //collider.material = collidedrMat;
+        edge.AddComponent<Bouncer>();
     }
 }
