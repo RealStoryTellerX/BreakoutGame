@@ -56,12 +56,15 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\director.cs" />
-    <Compile Include="Assets\Bouncer.cs" />
-    <Compile Include="Assets\ballMovement.cs" />
+    <Compile Include="Assets\doNotOpen\director.cs" />
+    <Compile Include="Assets\doNotOpen\Bouncer.cs" />
+    <Compile Include="Assets\doNotOpen\ballMovement.cs" />
     <Compile Include="Assets\scripts\playerMovement.cs" />
-    <Compile Include="Assets\cameraStuff.cs" />
-    <Compile Include="Assets\screenCollider.cs" />
+    <Compile Include="Assets\doNotOpen\cameraStuff.cs" />
+    <Compile Include="Assets\doNotOpen\screenCollider.cs" />
+    <Compile Include="Assets\doNotOpen\brickedUp.cs" />
+    <Compile Include="Assets\doNotOpen\PowerUps.cs" />
+    <Compile Include="Assets\doNotOpen\Manger.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
